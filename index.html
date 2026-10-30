@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare shopping prices in one place with PricePulse.">
+  <title>PricePulse — Compare before you buy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">`
+</head>
+<body>
+  <div class="announcement"><span class="sparkle">✦</span> Shop smarter. Compare faster. <span class="announcement-note">A demo project built for better shopping decisions.</span></div>
+  <header class="header">
+    <a class="brand" href="/"><span class="brand-mark">P</span><span>price<span class="brand-accent">pulse</span><small>COMPARE. SAVE. REPEAT.</small></span></a>
+    <nav><a href="#explore">Explore</a><a href="#how">How it works</a></nav>
+    <button class="saved-button" id="savedToggle" aria-label="Show saved products">♡ <span>Saved</span><b id="savedCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR SMARTER SHOPPING SIDEKICK</div>
+        <h1>One search.<br><span>Better prices.</span></h1>
+        <p>Compare product offers across stores in one clean place. Find your options before you spend.</p>
+        <form class="search-form" id="searchForm">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search headphones, shoes, watches..." aria-label="Search products">
+          <button type="submit">Find prices <span>→</span></button>
+        </form>
+        <div class="popular"><span>Popular:</span><button data-query="headphones">Headphones</button><button data-query="shoes">Shoes</button><button data-query="watch">Watches</button></div>
+        <div class="trust-row"><span>✓ Easy comparison</span><span>✓ Multiple stores</span><span>✓ No checkout here</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a shopping comparison dashboard">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="floating-tag tag-top">✦ SMART SHOPPING</div>
+        <div class="price-card">
+          <div class="price-card-top"><span class="mini-label">PRICE CHECK</span><span class="trend">↘ Compare</span></div>
+          <div class="product-emoji">🛍️</div>
+          <h3>Find your best deal</h3><p>Compare offers side by side.</p>
+          <div class="mini-store"><span class="store-dot amazon-dot">a</span><span>Store A</span><b>₹1,499</b></div>
+          <div class="mini-store highlighted"><span class="store-dot flip-dot">f</span><span>Store B</span><b>₹1,199 <i>LOW</i></b></div>
+          <div class="mini-store"><span class="store-dot meesho-dot">m</span><span>Store C</span><b>₹1,299</b></div>
+          <div class="card-foot">Illustrative prices · not live data</div>
+        </div>
+        <div class="floating-tag tag-bottom"><span>↗</span> Compare before you buy</div>
+      </div>
+    </section>
+
+    <section class="store-strip">
+      <span class="store-strip-label">EXPLORE STORES</span>
+      <div class="store-name amazon-name"><span>amazon</span><small>›</small></div>
+      <div class="store-name flip-name"><span class="flip-symbol">▰</span> Flipkart</div>
+      <div class="store-name myntra-name"><span>M</span> Myntra</div>
+      <div class="store-name meesho-name">meesho</div>
+      <span class="store-disclaimer">Store availability depends on integrations.</span>
+    </section>
+
+    <section class="products-section" id="explore">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE SMARTER WAY TO SHOP</div><h2>Explore products<span>.</span></h2><p>Compare sample offers and open store searches to check current listings.</p></div>
+        <div class="controls">
+          <select id="categoryFilter" aria-label="Filter by category"><option>All</option><option>Electronics</option><option>Fashion</option><option>Accessories</option><option>Home</option></select>
+          <select id="sortSelect" aria-label="Sort products"><option value="relevance">Recommended</option><option value="low">Lowest price first</option><option value="high">Highest price first</option></select>
+        </div>
+      </div>
+      <div class="status-note" id="statusNote"><span class="status-dot"></span> Demo mode: example prices only. Live prices are not connected.</div>
+      <div class="product-grid" id="productGrid"><div class="loading">Loading products…</div></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No products found</h3><p>Try another search term or category.</p><button id="clearSearch">Clear filters</button></div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="eyebrow">SIMPLE BY DESIGN</div><h2>Shop with a little more <span>confidence.</span></h2>
+      <div class="how-grid">
+        <article><div class="step-icon">⌕</div><small>STEP 01</small><h3>Search once</h3><p>Type a product name to browse matching demo listings.</p></article>
+        <article><div class="step-icon">⇄</div><small>STEP 02</small><h3>Compare offers</h3><p>See example prices together and sort by lowest price.</p></article>
+        <article><div class="step-icon">↗</div><small>STEP 03</small><h3>Check the store</h3><p>Open a retailer search to confirm the real product, price, shipping and terms.</p></article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div><div class="eyebrow">BUY SMARTER, NOT FASTER</div><h2>A better deal starts<br>with a better comparison.</h2></div>
+      <a href="#explore" class="cta-button">Explore products <span>→</span></a>
+      <div class="cta-shape"></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">P</span><span>price<span class="brand-accent">pulse</span><small>COMPARE. SAVE. REPEAT.</small></span></a><p>Independent demo project. Not affiliated with Amazon, Flipkart, Myntra or Meesho.</p><span>© <span id="year"></span> PricePulse</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
